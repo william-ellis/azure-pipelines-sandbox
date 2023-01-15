@@ -4,6 +4,8 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+lockBehavior: sequential
+
 jobs:
   - deployment:
     environment: testenv
