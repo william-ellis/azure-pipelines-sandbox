@@ -4,14 +4,9 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
-lockBehavior: sequential
-
-jobs:
-  - deployment:
-    environment: testenv
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-            - pwsh: Start-Sleep -Seconds 60
-              displayName: sleep for 60 seconds
+steps:
+  - pwsh: |
+      Write-Host "##vso[task.setvariable variable=foo;isreadonly=True]foo"
+      Write-Host "Foo: "
+      Write-Host $Env:FOO
+      Write-Host $(foo)
