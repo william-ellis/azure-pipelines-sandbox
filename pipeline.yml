@@ -5,4 +5,5 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - pwsh: Start-Sleep -Seconds 120
+  - pwsh: Write-Host $(Build.SourceBranch)
+    displayName: "Print Branch Name"
