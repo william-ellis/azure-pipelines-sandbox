@@ -5,5 +5,4 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - pwsh: |
-      Write-Host "Hello, world!"
+  - pwsh: Start-Sleep -Seconds 120
