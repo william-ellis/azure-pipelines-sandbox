@@ -5,11 +5,5 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-  - checkout: none
   - pwsh: |
-      Write-Host "##vso[task.setvariable variable=foo;isreadonly=True;isoutput=True]foo"
-    name: test
-  - pwsh: |
-      Write-Host "##vso[task.setvariable variable=bar;isreadonly=True;isoutput=True]bar"
-    name: test
-  - pwsh: Write-Host $(test.foo) $(test.bar)
+      Write-Host "Hello, world!"
