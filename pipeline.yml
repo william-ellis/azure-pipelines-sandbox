@@ -9,4 +9,6 @@ steps:
       Write-Host "##vso[task.setvariable variable=foo;isreadonly=True]foo"
       Write-Host "Foo: "
       Write-Host $Env:FOO
-      Write-Host $(foo)
+  - pwsh: |
+      Write-Host "Foo: "
+      Write-Host $Env:FOO
